@@ -1,3 +1,3 @@
 # aston
 
-Repository for himeworks from Aston. July 2025
+Repository for homeworks from Aston. July 2025
