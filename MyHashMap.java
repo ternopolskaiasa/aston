@@ -2,7 +2,7 @@ import lombok.*;
 
 public class MyHashMap<K, V> {
     private static final int DEFAULT_CAPACITY = 16;
-    private static final float LOAD_FACTOR = 0.75f;
+    private static final float DEFAULT_LOAD_FACTOR = 0.75f;
 
     static class Node<K,V>{
         private final K key;
@@ -20,7 +20,7 @@ public class MyHashMap<K, V> {
     private int capacity;
 
     public MyHashMap(){
-        this(DEFAULT_CAPACITY);
+        this(DEFAULT_CAPACITY, DEFAULT_LOAD_FACTOR);
     }
 
     @SuppressWarnings("unchecked")
@@ -120,7 +120,7 @@ public class MyHashMap<K, V> {
     }
 
     private void checkResize() {
-        if ((float) size / capacity >= LOAD_FACTOR) {
+        if ((float) size / capacity >= DEFAULT_LOAD_FACTOR) {
             resize();
         }
     }
@@ -147,4 +147,5 @@ public class MyHashMap<K, V> {
         capacity = newCapacity;
     }
 }
+
 
