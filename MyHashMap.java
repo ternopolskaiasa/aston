@@ -20,7 +20,7 @@ public class MyHashMap<K, V> {
     private int capacity;
 
     public MyHashMap(){
-        this(DEFAULT_CAPACITY, DEFAULT_LOAD_FACTOR);
+        this(DEFAULT_CAPACITY);
     }
 
     @SuppressWarnings("unchecked")
@@ -147,5 +147,6 @@ public class MyHashMap<K, V> {
         capacity = newCapacity;
     }
 }
+
 
 
