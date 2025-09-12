@@ -130,8 +130,13 @@ public class MyHashMap<K, V> {
      */
     @SuppressWarnings("unchecked")
     private void resize() {
+         if (table == null) {
+            throw new IllegalStateException("Resizing is impossible, hash map is empty!");
+        }
+    
         int newCapacity = capacity * 2;
         Node<K, V>[] newTable = (Node<K, V>[]) new Node[newCapacity];
+        this.capacity = newCapacity;
 
         for (Node<K, V> node : table) {
             while (node != null) {
@@ -147,6 +152,7 @@ public class MyHashMap<K, V> {
         capacity = newCapacity;
     }
 }
+
 
 
 
