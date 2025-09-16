@@ -27,6 +27,10 @@ public class UserDAOImpl implements UserDAO {
         }
     }
 
+    /**
+     * Method gives user by its id
+     * @return user with particular id
+     */
     @Override
     public User getUserById(Long id) throws DAOException {
         try (Session session = sessionFactory.openSession()) {
@@ -36,6 +40,10 @@ public class UserDAOImpl implements UserDAO {
         }
     }
 
+    /**
+     * Method gives all users from datebase
+     * @return all users
+     */
     @Override
     public List<User> getAllUsers() throws DAOException {
         try (Session session = sessionFactory.openSession()) {
@@ -45,6 +53,9 @@ public class UserDAOImpl implements UserDAO {
         }
     }
 
+    /**
+     * Method saves user into datebase
+     */
     @Override
     public void saveUser(User user) throws DAOException {
         try (Session session = sessionFactory.openSession()) {
@@ -56,6 +67,9 @@ public class UserDAOImpl implements UserDAO {
         }
     }
 
+    /**
+     * Method updates particular user's fields
+     */
     @Override
     public void updateUser(User user) throws DAOException {
         try (Session session = sessionFactory.openSession()) {
@@ -77,6 +91,9 @@ public class UserDAOImpl implements UserDAO {
         }
     }
 
+    /**
+     * Method deletes user by its id
+     */
     @Override
     public void deleteUser(Long id) throws DAOException {
         try (Session session = sessionFactory.openSession()) {
