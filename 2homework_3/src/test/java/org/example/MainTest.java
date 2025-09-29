@@ -18,7 +18,7 @@ class MainTest {
     private Scanner scanner;
 
     @Mock
-    private UserDAOImpl userDAO;
+    private userdaoimpl userDAO;
 
     @InjectMocks
     private Main main;
